@@ -121,6 +121,7 @@ module Jabber
           starttls
         rescue
           Jabber::debuglog("STARTTLS:\nFailure: #{$!}")
+          @status = DISCONNECTED
         end
       end
     end
